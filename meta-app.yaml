@@ -1,0 +1,17 @@
+apiVersion: core.napptive.com/v1alpha1
+kind: ApplicationMetadata
+name: "Tomcat server"
+version: latest
+description: "Tomcat server with customizations"
+keywords:
+  - "web"
+  - "server"
+  - "tomcat"
+license: "Apache License Version 2.0"
+url: "https://tomcat.apache.org/"
+doc: "https://tomcat.apache.org/tomcat-9.0-doc/"
+logo:
+  - src: "https://tomcat.apache.org/images/tomcat.png"
+    type: "image/png"
+    size: "128x128"
+

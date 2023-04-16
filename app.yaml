@@ -1,0 +1,25 @@
+apiVersion: core.oam.dev/v1beta1
+kind: Application
+metadata:
+  name: tomcat-app
+  annotations:
+    version: v1.0.0
+    description: "Customized version of Tomcat"
+spec:
+  components:
+    - name: tomcat
+      type: webservice
+      properties:
+        image: tomcat:latest
+        cpu: "0.5"
+        memory: 256Mi
+        ports:
+        - port: 8080
+          expose: true
+      traits:
+      - type: napptive-ingress         
+        properties:
+          name: tomcat
+          port: 8080
+          path: /
+
